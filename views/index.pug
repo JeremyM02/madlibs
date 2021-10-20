@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  h1 Enter Your Words
+  form(method = "Post" action = "/story" id = "words")
+    label(for="noun1") Noun:
+    input(type="text" name="noun1" id="noun1" value = `${noun_1}`)
+
+    br
+
+    label(for="verb1") Verb:
+    input(type="text" name="verb1" id="verb1" value = `${verb_1}`)
+
+    br
+
+    label(for="adjective1") Adjective:
+    input(type = "text" name="adjective1" id="adjective1" value = `${adjective_1}`)
+
+    br
+    br
+
+    label(for="noun2") Noun #2 (Plural):
+    input(type="text" name="noun2" id="noun2" value = `${noun_2}`)
+
+    br
+
+    label(for="verb2") Verb #2:
+    input(type="text" name="verb2" id="verb2" value = `${verb_2}`)
+
+    br
+
+    label(for="adjective2") Adjective #2:
+    input(type = "text" name="adjective2" id="adjective2" value = `${adjective_2}`)
+
+    br
+
+    label(for="name") Name:
+    input(type = "text" name="name" id="name" value = `${name_}`)
+
+    br
+
+    label(for="noun3") Noun #3:
+    input(type = "text" name="noun3" id="noun3" value = `${noun_3}`)
+
+    br
+    br
+
+
+  //Choose a Story
+  label(for="storyChoice") Choose One
+  select(form="words" name="storyChoice" id="storyChoice")
+    option(value = "1") Story 1
+    option(value = "2") Story 2
+    option(value = "3") Story 3
+    option(value = "4") Pick Random Story
+  br
+  button(type="submit" form="words") Tell Me a Story
